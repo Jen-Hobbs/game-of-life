@@ -19,9 +19,8 @@ public class Herbivore : MonoBehaviour, CharacterBehavior
     }
     public void Move()
     {
-        System.Random rnd = new System.Random();
-        int horizontal = rnd.Next(0, 3) -1;
-        int vertical = rnd.Next(0, 3) -1;
+        int horizontal = Random.Range(0, 3) -1;
+        int vertical = Random.Range(0, 3) -1;
         Vector3 movement = new Vector3(horizontal, 0f, vertical);
         transform.position += Vector3.MoveTowards(transform.position, movement, speed);
     }
