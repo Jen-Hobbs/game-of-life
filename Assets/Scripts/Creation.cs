@@ -14,7 +14,7 @@ public class Creation : MonoBehaviour
         //for(int x =0; x <= quantity; x++)
         {
             System.Random rnd = new System.Random();
-            for(int x = 0; x <= quantity; x++)
+            for(int x = 0; x < quantity; x++)
             {
                 GameObject setHerbivore = GameObject.Instantiate(herbivore, setPosition(rnd), transform.rotation);
                 setHerbivore.transform.SetParent(parent);
@@ -34,7 +34,6 @@ public class Creation : MonoBehaviour
     {
         float horizontal = rnd.Next(21) - 10;
         float vertical = rnd.Next(21) - 10;
-        Debug.Log(horizontal);
         return new Vector3(horizontal, 0, vertical);
     }
 }
